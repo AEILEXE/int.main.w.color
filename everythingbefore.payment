@@ -273,7 +273,7 @@ void menu_Enrollment(){
 		}
 	}else{
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	 SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN | FOREGROUND_INTENSITY);
+	 SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY);
 	 printf("No records found!");continue_Choice('0');}
 	
 	
