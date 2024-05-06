@@ -1,0 +1,53 @@
+int main(){
+	 srand(time(NULL));//kaya nagiiba yung color
+	do{
+		if(choice != '2' && choice != '3'){
+		system("cls");
+	setRandomTextColor();	
+		printf("test%c", choice);
+	setRandomTextColor();	
+		printf("\nA.Registration");
+	setRandomTextColor();	
+		printf("\nB.Enrollment");
+	setRandomTextColor();	
+		printf("\nC.Payment");
+	setRandomTextColor();	
+		printf("\nD.Reports");
+	setRandomTextColor();	
+		printf("\nE.Exit");
+	setRandomTextColor();	
+		printf("\nEnter your choice: ");choice = getche();
+		}
+
+		switch (choice){
+		case 'a':
+		case 'A':
+			menu_Registration();
+			break;
+		case 'b':
+		case 'B':
+		case '2':
+			menu_Enrollment();
+			break;
+		case 'c':
+		case 'C':
+		case '3':
+			menu_Payment();
+			break;
+		case 'x': //debug
+		case 'X':
+			debug_menu_Search();
+			break;
+		case 'y': //debug
+		case 'Y':
+			debug_Flex();
+			break;
+		default: 
+			 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY);
+			printf("Invalid option");
+			break;
+		}
+	}while(choice != 'e' );
+	return 0;
+}
